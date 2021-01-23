@@ -4,16 +4,14 @@ import face_recognition
 import os
 from datetime import datetime
 
-path = 'images'
+path = r'C:\Users\Akash Papnai\OneDrive\Documents\GitHub\Face-Recognition-and-saving-face-name-and-time\images'
 images = []
 classNames = []
 myList = os.listdir(path)
-print(myList)
 for cls in myList:
     curImg = cv2.imread(f'{path}/{cls}')
     images.append(curImg)
     classNames.append(os.path.splitext(cls)[0])
-print(classNames)
 
 def findencodings(images):
     encodelist = []
@@ -52,7 +50,6 @@ while True:
     for encodeFace,faceLoc in zip(encodesCurFrame,facesCurFrame):
         matches = face_recognition.compare_faces(encodeListKnown,encodeFace)
         faceDis = face_recognition.face_distance(encodeListKnown,encodeFace)
-        print(faceDis)
         matchIndex = np.argmin(faceDis)
 
         if matches[matchIndex]:
