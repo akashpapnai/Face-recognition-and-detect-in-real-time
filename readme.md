@@ -8,7 +8,7 @@ Arijit Singh</br>
 Sundar Pichai</br>
 Akash Papnai (me)</br>
 
-To recoginze more people, add their pictures to **images** folder.
+To recoginze more people, add their pictures to **images** folder.</br>
 **Note**: Don't forget to replace the image name to the person name that you have added.
 
 
