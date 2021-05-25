@@ -4,6 +4,11 @@ import face_recognition
 import os
 from datetime import datetime
 
+try:
+    os.remove('attendance.csv')
+except:
+    pass
+
 path = os.getcwd()
 path+='/images'
 images = []
@@ -23,6 +28,8 @@ def findencodings(images):
     return encodelist
 
 def markattendance(name):
+    with open('attendance.csv','w') as f:
+        pass
     with open('attendance.csv','r+') as f:
         myDataList = f.readlines()
         nameList = []
