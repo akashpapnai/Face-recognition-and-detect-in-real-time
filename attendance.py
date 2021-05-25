@@ -4,7 +4,8 @@ import face_recognition
 import os
 from datetime import datetime
 
-path = r'C:\Users\Akash Papnai\OneDrive\Documents\GitHub\Face-Recognition-and-saving-face-name-and-time\images'
+path = os.getcwd()
+path+='/images'
 images = []
 classNames = []
 myList = os.listdir(path)
